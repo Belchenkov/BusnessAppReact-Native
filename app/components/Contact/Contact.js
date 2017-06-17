@@ -5,6 +5,9 @@ const s = require('../../style');
 
 export default class Contact extends Component{
  
+doSomething() {
+    
+}
 
   render(){
     return(  
@@ -26,6 +29,7 @@ export default class Contact extends Component{
             <Button
               title="Submit"
               color="#841584"
+              onPress={this.doSomething}
             />
         </View>
 

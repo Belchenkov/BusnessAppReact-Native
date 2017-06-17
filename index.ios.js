@@ -1,53 +1,48 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React, {Component} from 'react';
+import {AppRegistry, Text, View, 
+  Image, Button, Switch, ScrollView} from 'react-native';
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
 
-export default class mobiletodos extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+import Home from './app/components/Home/Home';
+import About from './app/components/About/About';
+import Contact from './app/components/Contact/Contact';
+
+const s = require('./app/style');
+
+export default class mobiletodos extends Component{
+ constructor() {
+   super();
+   this.state = {
+     logoHidden: false
+   }
+ }
+
+  render(){
+    let logoHidden = this.state.logoHidden;
+    let img = <Text></Text>;  
+
+    if (logoHidden) {
+      img = <Text></Text>;
+    } else {
+       img = <Image style={s.image} source={require('./logo.png')} />
+    }
+    return(  
+      <View>
+        <View style={s.imageWrap}>
+          {img}
+          <Switch onValueChange={(value)=> this.setState({logoHidden: value})}
+                  value={this.state.logoHidden}
+          />    
+        </View>
+        <ScrollView style={s.scrollView}>
+          <Home />
+          <About />
+          <Contact />
+        </ScrollView>
       </View>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('mobiletodos', () => mobiletodos);

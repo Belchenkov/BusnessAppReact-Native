@@ -26,6 +26,10 @@ module.exports = StyleSheet.create({
         height: 130,
     },
     scrollView: {
-        height: 500
+        height: 700
+    },
+    toolbar: {
+        height: 58,
+        backgroundColor: '#e9eaed'
     }
 });
