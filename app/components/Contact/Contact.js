@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View} from 'react-native';
+import {AppRegistry, Text, View, TextInput, Button} from 'react-native';
 
 const s = require('../../style');
 
@@ -9,7 +9,26 @@ export default class Contact extends Component{
   render(){
     return(  
       <View>
-        <Text style={s.heading}>Contact!</Text>
+        <Text style={s.heading}>Contact Us</Text>
+          <View style={{padding: 10}}>
+            <TextInput
+              style={{height: 40}}
+              placeholder="Enter Name"
+            />
+            <TextInput
+              style={{height: 40}}
+              placeholder="Enter Email"
+            />
+            <TextInput
+              style={{height: 40}}
+              placeholder="Optional Message"
+            />
+            <Button
+              title="Submit"
+              color="#841584"
+            />
+        </View>
+
       </View>
     )
   }

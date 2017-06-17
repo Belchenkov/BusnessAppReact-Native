@@ -16,5 +16,16 @@ module.exports = StyleSheet.create({
         padding: 15,
         lineHeight: 25,
         textAlign: 'center'
+    },
+    imageWrap: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    image: {
+        width: 130,
+        height: 130,
+    },
+    scrollView: {
+        height: 500
     }
 });
