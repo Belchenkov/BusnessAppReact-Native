@@ -1,18 +1,20 @@
 'use strict';
-var React = require('react-native');
-var {StyleSheet} = React;
+
+const React = require('react-native');
+const {StyleSheet} = React;
 
 module.exports = StyleSheet.create({
-  heading: {
-    fontSize:25,
-    textAlign:'center',
-    backgroundColor:'#f4f4f4',
-    padding:5,
-    marginBottom: 5
-  },
-  sectionText: {
-    padding:15,
-    lineHeight:25,
-    textAlign:'center'
-  }
+    heading: {
+        fontSize: 25,
+        textAlign: 'center',
+        backgroundColor: '#044',
+        color: 'white',
+        padding: 7,
+        marginBottom: 7
+    },
+    sectonText: {
+        padding: 15,
+        lineHeight: 25,
+        textAlign: 'center'
+    }
 });

@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-var s = require('../../style');
+import React, {Component} from 'react';
+import {AppRegistry, Text, View} from 'react-native';
 
-export default class About extends Component {
-  render() {
-    return (
+const s = require('../../style');
+
+export default class About extends Component{
+ 
+
+  render(){
+    return(  
       <View>
-        <Text style={s.heading}>About Us</Text>
-        <Text style={s.sectionText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+        <Text style={s.heading}>About!</Text>
+        <Text style={s.sectonText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis enim asperiores voluptas nobis architecto, ipsam tempore corporis veritatis pariatur commodi. Officiis libero cupiditate explicabo molestias dolore, quae architecto nam ut inventore dignissimos temporibus sit modi ratione! Quas consequuntur itaque id modi. Consectetur, laboriosam.</Text>
       </View>
-    );
+    )
   }
 }
+
 
 AppRegistry.registerComponent('About', () => About);
