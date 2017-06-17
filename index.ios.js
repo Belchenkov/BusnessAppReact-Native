@@ -9,7 +9,7 @@ import Contact from './app/components/Contact/Contact';
 
 const s = require('./app/style');
 
-export default class mobiletodos extends Component{
+export default class busnessapp extends Component{
  constructor() {
    super();
    this.state = {
@@ -45,4 +45,4 @@ export default class mobiletodos extends Component{
 }
 
 
-AppRegistry.registerComponent('mobiletodos', () => mobiletodos);
+AppRegistry.registerComponent('busnessapp', () => busnessapp);
